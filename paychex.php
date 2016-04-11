@@ -113,6 +113,14 @@ $result = $conn ->query($sql4am) or die($mysqli->error.__LINE__);
                                 $write .= "$payrollId$employee$jobCode$job$shift$de$rateCode$otRate$otHours\r\n";
                         }
 
+                        // Doubletime
+                        if ($dtPay > 0){
+                                $rateCode = "3 ";
+                                $job = str_pad("", 12, " ", STR_PAD_RIGHT);
+                                $write .= "$payrollId$employee$jobCode$job$shift$de$rateCode$dtRate$dtHours\r\n";
+                        }
+                        //// Doubletime ////
+
                         }
 
                         if ($isBq == "1"){
