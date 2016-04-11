@@ -6,7 +6,6 @@ $pass = "
 ";
 $conn = new mysqli("$host", "$userName", "$pass", "$dbName", "13306");
 
-
 $startDate = $_GET['startDate'];
 $endDate = $_GET['endDate'];
 $endDateReport = $_GET['endDate'];
